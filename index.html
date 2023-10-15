@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sistema de defesa</title>
+</head>
+
+<body>
+    <nav>
+        <div class="buttons">
+            <button id="home"><i class='bx bxs-home'></i>Pagina inicial</button>
+            <button id="hospedeiro"><i class='bx bx-body'></i></i>Hospedeiros</button>
+            <button id="about"><i class='bx bxs-id-card'></i> Sobre</button>
+        </div>
+        <img src="imgs/zombie.png" alt="zombie">
+    </nav>
+
+    <main>
+        <div class="home">
+            <button id="open">
+                <i class='bx bx-plus-circle'></i>Adicionar
+            </button>
+            <form id="addNewHost">
+                <div id="close"><i class='bx bx-x-circle'></i></div>
+                <h1>Registre um novo hospedeiro!</h1>
+                <h3>Preencha os campos abaixo.</h3>
+                <div class="row">
+                    <div class="column">
+                        <label>Nome do hospedeiro:</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="column">
+                        <label>Altura:</label>
+                        <input type="text" name="height">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label>Idade:</label>
+                        <input type="text" name="age">
+                    </div>
+                    <div class="column">
+                        <label>Peso:</label>
+                        <input type="text" name="weight">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label>Sexo:</label>
+                        <select name="gender">
+                            <option value="">Selecione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label>Tipo sanguineo:</label>
+                        <select name="bloodType">
+                            <option value="">Selecione</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label>Musica preferida:</label>
+                        <select name="music">
+                            <option value="">Selecione</option>
+                            <option value="pop">Pop</option>
+                            <option value="rock">Rock</option>
+                            <option value="pagode">Pagode</option>
+                            <option value="sertanejo">Sertanejo</option>
+                            <option value="rap">Hip-hop/Rap</option>
+                            <option value="eletronica">Eletrônica</option>
+                            <option value="funk">Funk</option>
+                            <option value="metal">Metal</option>
+                            <option value="outro">Outro estranho gênero</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label>Esporte praticado:</label>
+                        <select name="sport">
+                            <option value="">Selecione</option>
+                            <option value="futebol">Futebol</option>
+                            <option value="basquete">Ba squete</option>
+                            <option value="volei">Vôlei</option>
+                            <option value="luta">Luta</option>
+                            <option value="atletismo">Atletismo</option>
+                            <option value="esport">ESport</option>
+                            <option value="Nenhum">Nenhum</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label>Jogo Favorito:</label>
+                        <select name="game">
+                            <option value="">Selecione</option>
+                            <option value="Counter-Strike">Counter-Strike</option>
+                            <option value="minecraft">Minecraft</option>
+                            <option value="Fortnite">Fortnite</option>
+                            <option value="witcher">The Witcher</option>
+                            <option value="valorant">Valorant</option>
+                            <option value="assassins">Assassin's creed</option>
+                            <option value="WOW">World of Warcraft</option>
+                            <option value="FIFA">FIFA</option>
+                            <option value="dota">Dota</option>
+                            <option value="LOL">League of Legends</option>
+                            <option value="outro">Outros - pouco relevante</option>
+                        </select>
+                    </div>
+                </div>
+
+                <input type="submit" value="Enviar" disabled>
+            </form>
+            <div class="hostList">
+                <h1>Hospedeiros Catalogados</h1>
+                <div style="display: flex;flex-direction: column;">
+                    <label for="search">Pesquisar: </label>
+                    <input type="search" name="search" id="search">
+                </div>
+                <div id="tableContainer" style="overflow-x:auto;">
+                </div>
+                <button id="download">
+                    <i class='bx bxs-arrow-from-top'></i>Baixar os dados
+                </button>
+            </div>
+        </div>
+
+        <div class="detail" style="display: none;">
+            <div class="voltar">
+                <i class='bx bx-left-arrow-alt' id="voltar"></i>
+            </div>
+            <div class="content" id="detailContainer">
+
+            </div>
+        </div>
+
+        <div class="about" style="display: none;">
+            Cada hospedeiro possui as seguintes características:
+
+            Idade
+            Sexo
+            Peso e Altura
+            Tipo Sanguíneo
+            Gosto Musical: Pop; Rock; Pagode; Sertanejo; Hip-Hop/Rap; Eletrônica; Funk; Metal; Demais gêneros estranhos.
+            Pratica qual esporte: Futebol; Basquete; Vôlei; Luta; Atletismo; eSports; Natação; Outro - pouco relevante.
+            Jogo preferido: Counter-Strike; Minecraft; Fortnite; The Witcher; Valorant; Assassin's Creed; World of
+            Warcraft;
+            FIFA; League of Legends; Dota; Rocket League; Outro - pouco relevante.
+            Força (1 a 100)
+            Agilidade (1 a 100)
+            Inteligência (1 a 100)
+        </div>
+    </main>
+
+    <script type="module" src="javascript/main.js"></script>
+</body>
+
+</html>
