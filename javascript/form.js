@@ -1,5 +1,6 @@
-import { saveData } from './storage.js';
+import { saveData, download } from './storage.js';
 import { renderTable } from './table.js';
+import { closeForm } from './utils.js';
 
 function validate() {
     function setFieldError(input, isError) {
@@ -102,3 +103,12 @@ searchInput.addEventListener('input', () => {
     const tableContainer = document.getElementById('tableContainer');
     tableContainer.innerHTML = 'Nehum hospediro encontrado com esse termo de busca. Tente novamente!';
 });
+
+const downloadBtn = document.querySelector('#download');
+downloadBtn.addEventListener('click', download);
+
+const open = document.querySelector('#open');
+const close = document.querySelector('#close');
+
+open.addEventListener('click', closeForm);
+close.addEventListener('click', closeForm);

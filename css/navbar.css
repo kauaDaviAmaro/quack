@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navbar */
+
+@keyframes float {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & img {
+        width: 5rem;
+        animation: 2s infinite alternate float ease-in-out;
+    }
+
+    & .buttons {
+        width: 100%;
+        height: fit-content;
+
+
+        & button {
+            cursor: pointer;
+            border: 1px solid #ffffff63;
+            border-radius: 12px;
+            padding: 10px;
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+
+            & i {
+                font-size: 1.3em;
+            }
+        }
+    }
+}

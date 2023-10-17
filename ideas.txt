@@ -90,3 +90,12 @@ Minecraft, Fortnite: Inteligência += 15
 The Witcher, Assassin's Creed: Inteligência += 8, Força += 6
 World of Warcraft, League of Legends, Dota: Inteligência += 10
 FIFA, Rocket League: Agilidade += 10
+
+
+Nivel de pericualidade
+
+pericualidade < 100 e > 0 
+
+Regras para fraquezas:
+
+Agilidade < 20: lerdo

@@ -1,34 +1,5 @@
 import { removeItem } from "./storage.js";
-import { classifyHost } from "./classify.js";
-
-function showDetails(item) {
-    document.querySelector('.about').style.display = 'none';
-    document.querySelector('.home').style.display = 'none';
-    document.querySelector('.detail').style.display = 'block';
-
-    let { strength, speed, intelligence } = classifyHost(item);
-    let dangerousness = (strength * 0.4) + (speed * 0.3) + (intelligence * 0.3);
-    dangerousness = Math.round(dangerousness * 100) / 100;
-    dangerousness = dangerousness.toFixed(2);
-
-    const details = document.getElementById('detailContainer');
-    details.innerHTML = `
-        <h2>${item.name}</h2>
-        <p>Idade: ${item.age}</p>
-        <p>Peso: ${item.weight}</p>
-        <p>Altura: ${item.height}</p>
-        <p>Gênero: ${item.gender}</p>
-        <p>Tipo Sanguíneo: ${item.bloodType}</p>
-        <p>Música: ${item.music}</p>
-        <p>Esporte: ${item.sport}</p>
-        <p>Jogo: ${item.game}</p>
-        <p>Força: ${strength}</p>
-        <p>Velocidade: ${speed}</p>
-        <p>Inteligência: ${intelligence}</p>
-        <p>Periculosidade: ${dangerousness}</p>
-    `;
-
-}
+import { showDetails } from "./details.js";
 
 export function renderTable(data) {
     download.style.display = "block";
