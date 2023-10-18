@@ -1,4 +1,4 @@
-import { classifyHost } from "./classify.js";
+import { classifyHost, classifyWeakenes, defenceDuck, skillDuck } from "./classify.js";
 import {  setPage } from "./utils.js";
 
 function setAtributes(item) {
@@ -25,6 +25,36 @@ function setBars(dangerousness, strength, speed, intelligence) {
     document.getElementById('barIntel').style.width = intelligence + "%";
 }
 
+function setWeakeness(weakness) {
+    const weaknessContainer = document.getElementById('weakness');
+    weaknessContainer.innerHTML = '';
+    weakness.forEach(element  => {
+        const weaknessElement = document.createElement('li');
+        weaknessElement.innerHTML = element;
+        weaknessContainer.appendChild(weaknessElement);
+    });
+}
+
+function setSkills(skill) {
+    const skillContainer = document.getElementById('skills');
+    skillContainer.innerHTML = '';
+    skill.forEach(element  => {
+        const skillElement = document.createElement('li');
+        skillElement.innerHTML = element;
+        skillContainer.appendChild(skillElement);
+    });
+}
+
+function setDefence(defence){
+    const defenceContainer = document.getElementById('defence');
+    defenceContainer.innerHTML = '';
+    defence.forEach(element  => {
+        const defenceElement = document.createElement('li');
+        defenceElement.innerHTML = element;
+        defenceContainer.appendChild(defenceElement);
+    });
+}
+
 export function showDetails(item) {
     const quackButton = document.querySelector('#quackButton');
     setPage('detail');
@@ -33,11 +63,16 @@ export function showDetails(item) {
     let dangerousness = (strength * 0.4) + (speed * 0.3) + (intelligence * 0.3);
     dangerousness = Math.round(dangerousness * 100) / 100;
     dangerousness = dangerousness.toFixed(2);
+    let weakness = classifyWeakenes(strength, speed, intelligence, item);
 
+    setWeakeness(weakness);
     setBars(dangerousness, strength, speed, intelligence);
     setAtributes(item);
     quackButton.addEventListener('click', () => {
         setPage('quack');
-        console.log(item);
+        let skill = skillDuck(weakness);
+        let defence = defenceDuck(weakness);
+        setDefence(defence);
+        setSkills(skill);
     });
 }

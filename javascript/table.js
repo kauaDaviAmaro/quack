@@ -1,5 +1,6 @@
 import { removeItem } from "./storage.js";
 import { showDetails } from "./details.js";
+import { setPage } from "./utils.js";
 
 export function renderTable(data) {
     download.style.display = "block";
@@ -17,7 +18,7 @@ export function renderTable(data) {
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
 
-    const namesHeader = ['Nome', 'Idade', 'Peso', 'Altura', 'Sexo', 'Tipo Sanguineo', 'Música Preferida', 'Esporte praticado', 'Jogo favorito'];
+    const namesHeader = ['Nome', 'Altura', 'Idade', 'Peso', 'Sexo', 'Tipo Sanguineo', 'Música Preferida', 'Esporte praticado', 'Jogo favorito'];
     namesHeader.forEach(name => {
         const th = document.createElement('th');
         th.textContent = name;
@@ -45,7 +46,8 @@ export function renderTable(data) {
         const removeButtonCell = document.createElement('td');
         const removeButton = document.createElement('button');
         removeButton.innerHTML = "<i class='bx bxs-trash'></i>";
-        removeButton.addEventListener('click', () => {
+        removeButton.addEventListener('click', (event) => {
+            event.stopPropagation();
             removeItem("host", itemId);
             renderTable(JSON.parse(localStorage.getItem("host")));
         });

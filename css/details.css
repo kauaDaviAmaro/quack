@@ -1,13 +1,18 @@
 .detail{
+
     & i {
         font-size: 2em;
         cursor: pointer;
     }
 
     & .content {
+        background-color: #f3f3f3;
+        border-radius: 12px;
+        padding: 10px;
         & #name {
             text-align: center;
         }
+        margin-bottom: 3rem;
     }
 }
 
@@ -29,33 +34,62 @@
         min-width: fit-content;
     }
 
+    & label {
+        font-weight: bold;
+    }
+
 }
 
 .containerWeak {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
 
+    & .secret {
+        text-align: center;
+    }
+
     & .button {
-        background-color: gray;
-        padding: 20px;
-        
         & img {
             cursor: pointer;
-            width: 100%;
+            min-width: 10rem;
+            max-width: 50%;
         }
     }
+
+    & .weakness {
+        margin-bottom: 2rem;
+        min-width: 20rem;
+        min-height: 8rem;
+        background-color: #141414;
+        border-radius: 12px;
+        color: white;
+        padding: 10px;
+    }
 }
+
 
 .barContainer {
     background-color: #141414;
     width: 100%;
     height: 2rem;
     border-radius: 7px;
-
+    margin-bottom: 12px;
+    
     & > div {
-        background-color: orangered;
+        background-color: green;
         border-radius: 7px;
         height: 100%;
     }
+}
+
+.danger {
+    margin-bottom: 1rem;
+
+    & .barContainer {
+        & > div {
+            background-color: red;
+        }
+    }
+
 }

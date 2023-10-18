@@ -1,3 +1,95 @@
+export function classifyWeakenes(strength, speed, intelligence, host) {
+    let weakness = [];
+
+    if(speed < 20){
+        weakness.push("Lerdo");
+    }
+    if(strength < 20){
+        weakness.push("Fraco");
+    }
+    if(intelligence < 20){
+        weakness.push("Burro");
+    }
+
+    switch (host.sport) {
+        // case "futebol":
+        //     zombieSpeed += 10;
+        //     zombieStrength += 15;
+        //     break;
+        // case "basquete":
+        //     zombieSpeed += 15;
+        //     zombieStrength += 8;
+        //     zombieIntelligence += 8;
+        //     break;
+        // case "volei":
+        //     zombieSpeed += 7;
+        //     zombieStrength += 10;
+        //     zombieIntelligence += 8;
+        //     break;
+        // case "luta":
+        //     zombieStrength += 30;
+        //     zombieSpeed += 10;
+        //     break;
+        // case "atletismo":
+        //     zombieSpeed += 30;
+        //     zombieStrength += 10;
+        //     break;
+        // case "esport":
+        //     zombieIntelligence += 30;
+        //     break;
+        case "Nenhum":
+            weakness.push("sedentario");
+            break;
+    }
+
+    if(weakness.length === 0){
+        weakness.push("Nenhuma");
+    }
+    return weakness;
+}
+
+export function defenceDuck(dangerousness, strength, speed, intelligence){
+    let skill = [];
+
+    if (speed > 60) {
+        skill.push("Voo");
+    }
+        
+    
+    if (strength > 60) {
+        skill.push("Blindagem Natural");
+    }
+
+    if (intelligence > 60) {
+        skill.push("Estratégias Avançadas");
+    } 
+        
+    
+
+    if (skill.length === 0) {
+        skill.push("Nenhuma");
+    } 
+        
+    
+    return skill;
+}
+
+export function skillDuck(weakness) {
+    let atacks = [];
+    
+    for (const item of weakness) {
+        if (item === "Lerdo") {
+            atacks.push("Investida Rápida");
+        } else if (item === "Fraco") {
+            atacks.push("Ataque Preciso");
+        } else if (item === "Burro") {
+            atacks.push("Confusão Tática");
+        }
+    }
+
+    return atacks;
+}
+
 export function classifyHost(host) {
     let zombieStrength = 0;
     let zombieSpeed = 0;
