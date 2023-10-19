@@ -1,0 +1,156 @@
+{
+    "1": {
+        "name": "john",
+        "height": "1.8",
+        "age": "25",
+        "weight": "70",
+        "gender": "Masculino",
+        "bloodType": "B+",
+        "music": "Rock",
+        "sport": "Futebol",
+        "game": "Counter-Strike"
+    },
+    "2": {
+        "name": "maria",
+        "height": "1.65",
+        "age": "30",
+        "weight": "55",
+        "gender": "Feminino",
+        "bloodType": "AB-",
+        "music": "Pop",
+        "sport": "Natação",
+        "game": "Minecraft"
+    },
+    "3": {
+        "name": "ana",
+        "height": "1.65",
+        "age": "25",
+        "weight": "55",
+        "gender": "Feminino",
+        "bloodType": "B+",
+        "music": "Pop",
+        "sport": "Vôlei",
+        "game": "League of Legends"
+    },
+    "4": {
+        "name": "carlos",
+        "height": "1.8",
+        "age": "30",
+        "weight": "75",
+        "gender": "Masculino",
+        "bloodType": "AB-",
+        "music": "Rock",
+        "sport": "Futebol",
+        "game": "FIFA"
+    },
+    "5": {
+        "name": "marina",
+        "height": "1.6",
+        "age": "22",
+        "weight": "58",
+        "gender": "Feminino",
+        "bloodType": "O-",
+        "music": "Hip-Hop/Rap",
+        "sport": "eSports",
+        "game": "Valorant"
+    },
+    "6": {
+        "name": "gabriel",
+        "height": "1.75",
+        "age": "28",
+        "weight": "70",
+        "gender": "Masculino",
+        "bloodType": "A+",
+        "music": "Metal",
+        "sport": "Atletismo",
+        "game": "Assassin's Creed"
+    },
+    "7": {
+        "name": "alex",
+        "height": "1.75",
+        "age": "22",
+        "weight": "68",
+        "gender": "Masculino",
+        "bloodType": "A+",
+        "music": "Hip-Hop/Rap",
+        "sport": "Vôlei",
+        "game": "Valorant"
+    },
+    "8": {
+        "name": "Servidor",
+        "height": "1.8",
+        "age": "18",
+        "weight": "76",
+        "gender": "Feminino",
+        "bloodType": "AB-",
+        "music": "rock",
+        "sport": "basquete",
+        "game": "LOL"
+    },
+    "9": {
+        "name": "Gigante",
+        "height": "2.1",
+        "age": "23",
+        "weight": "80",
+        "gender": "Masculino",
+        "bloodType": "AB-",
+        "music": "eletronica",
+        "sport": "futebol",
+        "game": "LOL"
+    },
+    "11": {
+        "name": "Test",
+        "height": "1.5",
+        "age": "55",
+        "weight": "2.3",
+        "gender": "Feminino",
+        "bloodType": "AB+",
+        "music": "pagode",
+        "sport": "volei",
+        "game": "witcher"
+    },
+    "12": {
+        "name": "Tank",
+        "height": "1.2",
+        "age": "23",
+        "weight": "1.8",
+        "gender": "Masculino",
+        "bloodType": "B+",
+        "music": "eletronica",
+        "sport": "luta",
+        "game": "witcher"
+    },
+    "13": {
+        "name": "Lucca",
+        "height": "1.2",
+        "age": "8",
+        "weight": "45",
+        "gender": "Masculino",
+        "bloodType": "A-",
+        "music": "rock",
+        "sport": "futebol",
+        "game": "minecraft"
+    },
+    "14": {
+        "name": "Miguel",
+        "height": "1.6",
+        "age": "15",
+        "weight": "80",
+        "gender": "Feminino",
+        "bloodType": "AB+",
+        "music": "metal",
+        "sport": "Nenhum",
+        "game": "Fortnite"
+    },
+    "15": {
+        "name": "zumbi sonic ",
+        "height": "10",
+        "age": "12",
+        "weight": "1",
+        "gender": "Feminino",
+        "bloodType": "AB+",
+        "music": "rock",
+        "sport": "esport",
+        "game": "Fortnite"
+    }
+}

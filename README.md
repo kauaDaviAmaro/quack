@@ -1,6 +1,10 @@
 # Sistema de Defesa - Projeto SZ
 
+Como executar:
+- **[Como executar](#Como-Operar:-A-Ferramenta-de-Sobrevivência-no-Apocalipse-Zumbi)**
+
 Para os Hospedeiros:
+
 - **[Introdução](#introdução)**
 - **[Regras de Aprimoramento](#regras-de-aprimoramento)**
   - [Regras de Idade](#regras-de-idade)
@@ -15,8 +19,29 @@ Para os Hospedeiros:
 - **[Fraquezas](#fraquezas)**
 
 Para o Pato Destroyer 2000:
+
 - **[Pato Destroyer 2000 - Habilidade de Defesa](#habilidade-de-defesa-do-pato-com-base-nos-atributos-do-hospedeiro)**
 - **[Pato Destroyer 2000 - Habilidade de Ataque](#habilidade-de-ataque-do-pato-com-base-nas-fraquezas-do-hospedeiro)**
+
+Ferramentas Utilizados:
+
+- **[Ferramentas utilizadas](#Ferramentas-utilizadas)**
+
+## Como Operar: A Ferramenta de Sobrevivência no Apocalipse Zumbi
+
+Ao implementar, certifique-se de que o sistema está em execução em um serviço web ativo, como XAMPP, Wamp, ou utilize uma extensão como o live server para garantir a funcionalidade contínua.
+
+Acesse o endereço do aplicativo (geralmente: localhost://[nome_da_pasta]).
+
+### Instruções de Uso:
+
+- Use o botão "Adicionar" para incluir um novo hospedeiro no catálogo.
+- Ao pesquisar ou encontrar um hospedeiro, clique para visualizar informações adicionais.
+- Ao clicar no botão "Construir Chip", você poderá visualizar as Habilidades Especiais e Defesas Especiais do chip para o hospedeiro selecionado.
+
+- A guia "Sobre" fornece informações adicionais.
+
+Nota: O arquivo dados.json contém um conjunto de dados destinado a preencher a tabela com hospedeiros previamente configurados (utilizando o botao "upload").
 
 
 ## Introdução
@@ -132,14 +157,17 @@ Se o indivíduo não pratica nenhum esporte, é considerado sedentário.
 
 Após extensos estudos, análise de dados e incidentes com café, nossos incríveis pesquisadores liderados pelo Dr. Quackenstein desenvolveram o Pato Destroyer 2000.
 
-
 ## Fraquezas
 
-- **Agilidade < 20: Lerdo:** [explicao]
-- **Inteligência < 20: Burro:** [explicao]
-- **Força < 20: Fraco:** [explicao]
-
-- **Esporte = Nenhum:** [explicao]
+- **Agilidade < 20: Lerdo**
+- **Descoordenação Motora (Agilidade entre 20 e 30)** 
+- **Inteligência < 20: Burro**
+- **Arrogância (Inteligência entre 20 e 30)**
+- **Força < 20: Fraco** 
+- **Altura < 70: Magra(o)**
+- **Altura > 2.00: Altura Extrema**
+- **Altura < 1.5: Claustrofobia**
+- **Esporte = Nenhum**
 
 # Arma Extremamente Secreta - Pato Destroyer 2000
 
@@ -153,6 +181,14 @@ Após extensos estudos, análise de dados e incidentes com café, nossos incrív
 
 - **Inteligência > 60: Estratégias Avançadas:** Quando o hospedeiro demonstra alta inteligência, o Pato Destroyer 2000 é capaz de adotar estratégias avançadas de defesa. Isso inclui a capacidade de antecipar movimentos dos zumbis, identificar padrões de ataque e tomar decisões táticas para proteger efetivamente sua equipe.
 
+- **Imunidade Reforçada (Tipo Sanguíneo A+ e B-): Escudo Antígeno:** Diante de um hospedeiro com imunidade reforçada devido ao tipo sanguíneo A+ ou B-
+
+- **Resistência Muscular (Pratica Esporte - Luta): Esquiva Aprimorada:** Se o hospedeiro pratica esporte, especialmente luta, o Pato Destroyer 2000 utiliza sua esquiva aprimorada. 
+
+- **Consciência Tática (Jogo Preferido - Estratégia): Barreira Estratégica:** Quando o hospedeiro tem uma consciência tática aprimorada devido ao seu jogo preferido ser de estratégia, o Pato Destroyer 2000 cria uma barreira estratégica.
+
+- **Resistência ao Estresse (Gosto Musical - Eletrônica): Campo de Anulação Sonora:** Diante de um hospedeiro com resistência ao estresse devido ao gosto musical voltado para eletrônica, o Pato Destroyer 2000 cria um campo de anulação sonora.
+
 ## Habilidade de Ataque do Pato (com base nas fraquezas do hospedeiro)
 
 - **Lerdo (Agilidade < 20): Investida Rápida:** Se o hospedeiro apresenta baixa agilidade (inferior a 20), o Pato Destroyer 2000 utiliza sua habilidade de investida rápida. O pato acelera em direção aos zumbis com uma velocidade surpreendente, atacando e desorientando-os.
@@ -160,3 +196,29 @@ Após extensos estudos, análise de dados e incidentes com café, nossos incrív
 - **Burro (Inteligência < 20): Confusão Tática:** Diante de um hospedeiro com baixa inteligência, o Pato Destroyer 2000 emprega táticas de confusão. O pato realiza movimentos imprevisíveis, confundindo os zumbis e desviando sua atenção, enquanto permite que outros membros da equipe ajam estrategicamente.
 
 - **Fraco (Força < 20): Ataque Preciso:** Quando o hospedeiro demonstra fraqueza física, o Pato Destroyer 2000 utiliza sua habilidade de ataque preciso. O pato concentra seus ataques em pontos vitais dos zumbis, maximizando a eficácia de seus golpes e neutralizando ameaças com eficiência.
+
+- **Descoordenação Motora (Agilidade entre 20 e 30): Ataque de Distração:** O pato cria movimentos rápidos e caóticos para desorientar os zumbis, criando aberturas para ataques estratégicos.
+
+- **Sedentario: Estratégia de Desgaste:** O Pato Destroyer 2000, ao perceber a falta de condicionamento físico do hospedeiro, adota uma estratégia de desgaste.
+
+- **Arrogância (Inteligência entre 20 e 30): Provocação Estratégica:**  Diante de um hospedeiro com arrogância, caracterizado por uma inteligência entre 20 e 30, o Pato Destroyer 2000 utiliza sua habilidade de provocação estratégica.
+
+- **Magra(o): Ataque Ágil:** Se o hospedeiro possui uma constituição física magra, com peso inferior a 70, o Pato Destroyer 2000 emprega seu ataque ágil
+
+- **Altura Extrema (Altura maior que 2.00): Ataque Aéreo Vertical:** Caso o hospedeiro tenha uma altura extrema, superior a 2.00, o Pato Destroyer 2000 utiliza sua habilidade de ataque aéreo vertical
+
+- **Claustrofobia (Altura menor que 1.50): Ataque Subterrâneo:**  Se o hospedeiro sofre de claustrofobia devido à altura inferior a 1.50, o Pato Destroyer 2000 utiliza sua habilidade de ataque subterrâneo.
+
+
+## Tecnologias Empregadas
+
+Linguagens:
+- HTML
+- CSS
+- JavaScript
+
+Dark Mode:
+- Utilização do [Darkmodejs](https://darkmodejs.learn.uno)
+
+Criação de Imagens:
+- Bing Image Creator

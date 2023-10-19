@@ -1,34 +1,42 @@
 #voltarDetail {
+    position: absolute;
     max-width: fit-content;
     font-size: 2em;
     cursor: pointer;
 }
 
 .quack {
+
+    & .cont {
+
+        background-color: #153243;
+        color: white;
+        padding: 10px;
+        border-radius: 12px;
+    }
     & img {
         max-width: 20rem;
     }
 
+    & .duck {
+        text-align: center;
+    }
+
     & h1 {
         text-align: center;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
 
     .containerQuack {
         display: flex;
+        align-items: start;
         justify-content: space-evenly;
         flex-wrap: wrap;
 
-        & .skillContainer {
+        & .skillContainer, & .defenceContainer {
             padding: 15px;
             border-radius: 12px;
-            background: #f3f3f3;
-            margin: 2rem 0;
             min-height: 8rem;
-
-            & .skills {
-               
-            }
         }
     }
 }

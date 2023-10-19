@@ -12,19 +12,19 @@ export function setPage(page){
     }else if (page == 'about') {
         home.style.display = 'none';
         detail.style.display = 'none';
-        about.style.display = 'block';
+        about.style.display = 'flex';
         quackPage.style.display = 'none';
     }else if (page == 'quack') {
         detail.style.display = 'none';
         home.style.display = 'none';
         about.style.display = 'none';
         quackPage.style.display = 'block';
-    }else{
+    }else {
         detail.style.display = 'none';
         home.style.display = 'block';
         quackPage.style.display = 'none';
         about.style.display = 'none';
-    } 
+    }
 }
 
 export function closeForm(){
@@ -37,8 +37,8 @@ export function closeForm(){
         open.style.display = 'none';
         close.style.display = 'block';
     }else {
-        form.style.display = 'none';
         open.style.display = 'block';
+        form.style.display = 'none';
         close.style.display = 'none';   
     } 
         

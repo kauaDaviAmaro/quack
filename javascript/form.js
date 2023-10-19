@@ -1,4 +1,4 @@
-import { saveData, download } from './storage.js';
+import { saveData, download, addItem, saveItens } from './storage.js';
 import { renderTable } from './table.js';
 import { closeForm } from './utils.js';
 
@@ -70,7 +70,6 @@ function validate() {
 
 
 const addNewHost = document.getElementById('addNewHost');
-const tableContainer = document.getElementById('table-container');
 const searchInput = document.getElementById('search');
 
 addNewHost.addEventListener('input', validate);
@@ -87,7 +86,7 @@ addNewHost.addEventListener('submit', (e) => {
 
 
 searchInput.addEventListener('input', () => {
-    const searchValue = searchInput.value.toLowerCase();
+    const searchValue = searchInput.value;
     const hosts = JSON.parse(localStorage.getItem("host"));
     const filteredHosts = Object.keys(hosts).reduce((acc, key) => {
         const host = hosts[key];
@@ -101,7 +100,25 @@ searchInput.addEventListener('input', () => {
         return;
     }
     const tableContainer = document.getElementById('tableContainer');
-    tableContainer.innerHTML = 'Nehum hospediro encontrado com esse termo de busca. Tente novamente!';
+    tableContainer.innerHTML = '<p>Nehum hospedeiro encontrado com esse termo de busca. Tente novamente!</p>';
+});
+
+const uploadBtn = document.querySelector('#upload');
+uploadBtn.addEventListener('click', () => {
+    const fileInput = document.querySelector('#fileInput');
+    fileInput.click();
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+            const hosts = JSON.parse(reader.result);
+            saveItens("host", hosts);
+            renderTable(hosts);
+        };
+        reader.readAsText(file);
+        fileInput.value = '';
+        return;
+    });
 });
 
 const downloadBtn = document.querySelector('#download');

@@ -1,0 +1,40 @@
+.about {
+    min-height: 90vh;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+
+    & .content {
+        height: fit-content;
+        flex: 1;
+        min-width: 20rem;
+        padding: 0 10px;
+
+        & h1 {
+            font-size: clamp(1rem, 2vw, 3rem);
+        }
+
+        & .text {
+            text-align: justify;
+            margin-bottom: 1rem;
+            font-size: 1.2em;
+            color: lightslategray;
+            text-indent: 20px;
+            padding: 10px 20px 0 20px;
+        }
+
+
+    }
+
+    & .image {
+        background-image: url('../imgs/duck.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 20rem;
+        border-radius: 12px;
+        flex: 1;
+        min-height: 100%;
+    }
+}

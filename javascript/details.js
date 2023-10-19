@@ -71,7 +71,7 @@ export function showDetails(item) {
     quackButton.addEventListener('click', () => {
         setPage('quack');
         let skill = skillDuck(weakness);
-        let defence = defenceDuck(weakness);
+        let defence = defenceDuck(strength, speed, intelligence, item);
         setDefence(defence);
         setSkills(skill);
     });

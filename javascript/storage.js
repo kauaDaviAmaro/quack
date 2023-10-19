@@ -14,6 +14,10 @@ export function removeItem(storageKey, itemId) {
     }
 }
 
+export function saveItens(storageKey, newItem) {
+        localStorage.setItem(storageKey, JSON.stringify(newItem));
+}
+
 export function saveData(storageKey, data){
     const newHost = {};
 

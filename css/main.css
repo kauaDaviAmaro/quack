@@ -1,12 +1,23 @@
 @import 'details.css';
 @import 'navbar.css';
 @import 'quack.css';
-
+@import 'about.css';
 
 /* main */
 
 main {
     margin: 1rem;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+        height: fit-content;
+    }
 }
 
 #open {
@@ -82,7 +93,7 @@ main {
 
 
 .hostList {
-    & #download {
+    & #download, #upload {
         cursor: pointer;
         margin-top: 5px;
         padding: 10px;
@@ -90,6 +101,10 @@ main {
         background-color: orange;
         color: white;
         border: none;
+    }
+
+    & #upload {
+        background-color: green;
     }
     & h1 {
         margin: 1rem 0;
@@ -111,21 +126,24 @@ main {
     }
 
     & table {
-        user-select: none;
-        overflow-x:auto;
-        border: 1px solid #aaaaaae5;
-        border-radius: 7px;
+        border-collapse: collapse;
+        font-size: 0.9em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        overflow-x: auto;
         width: 100%;
-        padding: 5px;
-
+        
         & thead {
-            background-color: orange;
-            color: white;
+            background-color: #fcbf49;
+            color: #ffffff;
+            text-align: left;
         }
 
+        & th, & td {
+            padding: 12px 15px;
+        }
+        
         & tbody tr {
             cursor: pointer;
-    
             &:hover {
                 background-color: rgba(128, 128, 128, 0.521);
             }
@@ -134,7 +152,7 @@ main {
         & tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-
+        
         & td:last-child {
             text-align: center;
             & i {
@@ -157,18 +175,17 @@ main {
         overflow-x: scroll;
     }
     nav {
-        margin: 0;
-        padding: 2px;
-        flex-direction: column-reverse;
-        align-items: start;
-        & button {
-            padding: 0;
-        }
-        & img {
-            margin-bottom: 10px;
-        }
+        padding: 0 1px;
+    }
+    .info {
+        margin: 1rem 0;
     }
     .row{
         flex-direction: column;
     }
+
+    .weakness {
+        width: 100%;
+    }
 }
+
