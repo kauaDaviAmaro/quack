@@ -31,6 +31,8 @@ Ferramentas Utilizados:
 
 Ao implementar, certifique-se de que o sistema está em execução em um serviço web ativo, como XAMPP, Wamp, ou utilize uma extensão como o live server para garantir a funcionalidade contínua.
 
+Colocar os arquivos no serviço web
+
 Acesse o endereço do aplicativo (geralmente: localhost://[nome_da_pasta]).
 
 ### Instruções de Uso:
