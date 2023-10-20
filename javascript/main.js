@@ -27,7 +27,7 @@ const backDetail = document.querySelector('#voltarDetail');
 backDetail.addEventListener('click', () => setPage('detail'));
 
 document.addEventListener('DOMContentLoaded', () => {
-    new Darkmode({label: '🌓'}).showWidget();
+    new Darkmode({label: '🌓', autoMatchOsTheme: true}).showWidget();
     renderTable(JSON.parse(localStorage.getItem("host")));
     setPage('home');
 });
