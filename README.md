@@ -42,7 +42,7 @@ Acesse o endereço do aplicativo (geralmente: localhost://[nome_da_pasta]).
 - A guia "Sobre" fornece informações adicionais.
 
 Nota: O arquivo dados.json contém um conjunto de dados destinado a preencher a tabela com hospedeiros previamente configurados (utilizando o botao "upload").
-
+Nota 2.0: O website é responsivo
 
 ## Introdução
 
